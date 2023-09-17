@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap 6</title>
+</head>
+<body>
+    <script>
+        let calcTip = bill => {
+            return bill >= 50 && bill <= 300 ? bill*0.15 : bill*0.2;
+        }
+        // test function
+        console.log(`tiền tip của bill 100 là ${calcTip(100)}`);
+
+        let bills = [125, 555, 44];
+        let tips = bills.map(bill => calcTip(bill));
+        
+        let total = [];
+        for (let i = 0; i < bills.length; i++) {
+            total.push(bills[i] + tips[i]);
+            
+        }
+        console.log("Bills:", bills);
+        console.log("Tips:",tips);
+        console.log("Totals:",total);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 3</title>
+</head>
+
+<body>
+    <script>
+        // hàm tính điểm trung bình
+        function tinhTrungBinhDiem(arrayScore) {
+            let sum = 0;
+            arrayScore.forEach(score => {
+                sum += score
+            });
+            return (sum / arrayScore.length).toFixed(2);
+        }
+
+        // data 01
+        // Tính điểm trung bình của mỗi đội
+        // Dolphins score
+        const diemDolphins = [96, 108, 89];
+        // Koalas score
+        const diemKoalas = [88, 91, 110];
+        
+        let trungBinhDiemDolphins = tinhTrungBinhDiem(diemDolphins)
+        let trungBinhDiemKoalas = tinhTrungBinhDiem(diemKoalas)
+
+        console.log("Data 1");
+        console.log("trung bình điểm của đội Dolphins là", trungBinhDiemDolphins);
+        console.log("trung bình điểm của đội Koalas là", trungBinhDiemKoalas);
+
+        // So sánh điểm trung bình của các đội để xác định đội chiến thắng trong cuộc thi
+        if (trungBinhDiemDolphins > trungBinhDiemKoalas)
+            console.log("Đội Dolphins chiến thắng")
+        else if (trungBinhDiemDolphins < trungBinhDiemKoalas)
+            console.log("Đội Koalas chiến trắng")
+        else
+            console.log("Hai đội hòa nhau");
+
+        
+        // data bonus 1
+        // Tính điểm trung bình của mỗi đội
+        // Dolphins score
+        const diemDolphins1 = [97, 112, 101];
+        // Koalas score
+        const diemKoalas1 = [109, 95, 123];
+        
+        let trungBinhDiemDolphins1 = tinhTrungBinhDiem(diemDolphins1)
+        let trungBinhDiemKoalas1 = tinhTrungBinhDiem(diemKoalas1)
+
+        console.log("Data bonus 1");
+        console.log("trung bình điểm của đội Dolphins là", trungBinhDiemDolphins1);
+        console.log("trung bình điểm của đội Koalas là", trungBinhDiemKoalas1);
+
+        // bonus 1
+        if(trungBinhDiemDolphins1 > trungBinhDiemKoalas1 && trungBinhDiemDolphins1 >= 100)
+            console.log("Đội Dolphins chiến thắng và đạt điểm tối thiểu 100")
+        else if(trungBinhDiemKoalas1 > trungBinhDiemDolphins1 && trungBinhDiemKoalas1 >=100) 
+            console.log("Đội Koalas chiến trắng và đạt điểm tối thiếu 100")
+        else if (trungBinhDiemDolphins1 == trungBinhDiemDolphins1 && trungBinhDiemDolphins1 >=100)
+            console.log("Hai đội hòa nhau và đạt điểm tối thiếu 100")
+        else
+            console.log("không có đội nào chiến thắng và đạt điểm tối thiếu 100");
+        
+        // data bonus 2
+        // Tính điểm trung bình của mỗi đội
+        // Dolphins score
+        const diemDolphins2 = [97, 112, 101];
+        // Koalas score
+        const diemKoalas2 = [109, 95, 106];
+        
+        let trungBinhDiemDolphins2 = tinhTrungBinhDiem(diemDolphins2)
+        let trungBinhDiemKoalas2 = tinhTrungBinhDiem(diemKoalas2)
+
+        console.log("Data bonus 2");
+        console.log("trung bình điểm của đội Dolphins là", trungBinhDiemDolphins2);
+        console.log("trung bình điểm của đội Koalas là", trungBinhDiemKoalas2);
+
+        // bonus 1
+        if(trungBinhDiemDolphins2 > trungBinhDiemKoalas2 && trungBinhDiemDolphins2 >= 100)
+            console.log("Đội Dolphins chiến thắng và đạt điểm tối thiểu 100")
+        else if(trungBinhDiemKoalas2 > trungBinhDiemDolphins2 && trungBinhDiemKoalas2 >=100) 
+            console.log("Đội Koalas chiến trắng và đạt điểm tối thiếu 100")
+        else if (trungBinhDiemDolphins2 == trungBinhDiemDolphins2 && trungBinhDiemDolphins2 >=100)
+            console.log("Hai đội hòa nhau và đạt điểm tối thiếu 100")
+        else
+            console.log("không có đội nào chiến thắng và đạt điểm tối thiếu 100");
+        
+    </script>
+</body>
+
+</html>

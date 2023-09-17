@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 7</title>
+</head>
+<body>
+    <script>
+        function calcBMI() {
+            this.bmi = (this.weight / (this.height ** 2)).toFixed(2);
+            return this.bmi;
+        }
+        const mark = {
+            name: "Mark",
+            weight: 78,
+            height: 1.69,
+            calcBMI: calcBMI
+        };
+        
+
+        const john = {
+            name: "John",
+            weight: 92,
+            height: 1.95,
+            calcBMI: calcBMI
+        };
+
+        mark.calcBMI();
+        john.calcBMI();
+
+        if(mark.bmi > john.bmi)
+            console.log(`Mark's BMI (${mark.bmi}) is higher than John's (${john.bmi})!`);
+        else if(mark.bmi < john.bmi)
+            console.log(`John's BMI (${john.bmi}) is higher than Mark's (${mark.bmi})!`);
+    </script>
+</body>
+</html>

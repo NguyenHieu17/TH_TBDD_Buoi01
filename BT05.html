@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 5</title>
+</head>
+<body>
+    <script>
+        //Create an arrow function 'calcAverage' to calculate the average of 3 scores
+        function calcAverage(arrayScore) {
+            let sum = 0;
+            arrayScore.forEach(score => {
+                sum += score
+            });
+            return (sum / arrayScore.length).toFixed(2);
+        }
+        // Create a function 'checkWinner' that takes the average score of each team
+        function checkWinner(avgDolhins,avgKoalas) {
+            if(avgDolhins >= 2*avgKoalas)
+                console.log(`Dolhins win (${avgDolhins} vs ${avgKoalas})`);
+            else if(avgKoalas >= 2*avgDolhins)
+                console.log(`Koalas win (${avgKoalas} vs ${avgDolhins}`);
+            else
+                console.log("No team wins!");
+        }
+
+        // data 1
+        // Tính điểm trung bình của mỗi đội
+        // Dolphins score
+        const diemDolphins1 = [44, 23, 71];
+        // Koalas score
+        const diemKoalas1 = [65, 54, 49];
+        
+        let trungBinhDiemDolphins1 = calcAverage(diemDolphins1);
+        let trungBinhDiemKoalas1 = calcAverage(diemKoalas1);
+
+        console.log("Data 1");
+        console.log("trung bình điểm của đội Dolphins là", trungBinhDiemDolphins1);
+        console.log("trung bình điểm của đội Koalas là", trungBinhDiemKoalas1);
+        checkWinner(trungBinhDiemDolphins1, trungBinhDiemKoalas1);
+
+        // data 2
+        // Tính điểm trung bình của mỗi đội
+        // Dolphins score
+        const diemDolphins2 = [85, 54, 41];
+        // Koalas score
+        const diemKoalas2 = [23, 34, 27];
+        
+        let trungBinhDiemDolphins2 = calcAverage(diemDolphins2);
+        let trungBinhDiemKoalas2 = calcAverage(diemKoalas2);
+
+        console.log("Data 2");
+        console.log("trung bình điểm của đội Dolphins là", trungBinhDiemDolphins2);
+        console.log("trung bình điểm của đội Koalas là", trungBinhDiemKoalas2);
+        checkWinner(trungBinhDiemDolphins2, trungBinhDiemKoalas2);
+
+    </script>
+</body>
+</html>
